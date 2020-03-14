@@ -5,6 +5,8 @@ const app = express()
 const forecast = require('./utils/forecast')
 const geocode = require('./utils/geocode')
 
+const port = process.env.PORT || 3000
+
 //console.log(__dirname)
 //console.log(__filename)
 
@@ -125,6 +127,6 @@ app.get('*', (req, res) => {
 //     res.send('<h1> About </h1> <h2> About 2 </h2>')
 // })
 
-app.listen(3000, () => {
-    console.log('Server has started on port 3000')
+app.listen(port, () => {
+    console.log('Server has started on port ' + port)
 })
